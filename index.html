@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    /> -->
     <link rel="stylesheet" href="css/swiper/swiper-bundle.min.css" />
-
     <link rel="stylesheet" href="css/aos/aos.css" />
 
     <title>Test app</title>
@@ -32,7 +27,11 @@
             <a href="/" class="card first-card">
               <div class="illustration-unit">
                 <div class="image">
-                  <img src="img/info-images/ikea.webp" alt="ikea" />
+                  <img
+                    src="img/info-images/ikea.webp"
+                    alt="ikea"
+                    fetchpriority="high"
+                  />
                 </div>
                 <div class="more-info">
                   <div class="more-info-button">Подробнее</div>
@@ -112,6 +111,7 @@
                   <img
                     src="img/info-images/electric-tower.webp"
                     alt="electric-tower"
+                    fetchpriority="high"
                   />
                 </div>
                 <div class="more-info">
@@ -199,6 +199,7 @@
                   <img
                     src="img/info-images/business-center.webp"
                     alt="business-center"
+                    fetchpriority="high"
                   />
                 </div>
                 <div class="more-info">
@@ -519,7 +520,6 @@
       </main>
     </div>
 
-    <!--  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <script src="js/swiper/swiper-bundle.min.js"></script>
     <script src="js/aos/aos.js"></script>
     <script src="js/index.js"></script>
