@@ -1,0 +1,65 @@
+@import "../sass-utils/variables";
+@import "../sass-utils/mixins";
+
+.swiper-card {
+  position: relative;
+  padding-bottom: 26px;
+  width: 100%;
+  .image {
+    height: 280px;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.65s ease;
+    }
+  }
+
+  .swiper-slide-info {
+    position: absolute;
+    padding: 25px 15px;
+    width: auto;
+    left: 13px;
+    right: 13px;
+    bottom: -8%;
+    background: $background_info;
+    transition: 0.65s;
+    backdrop-filter: blur(41px);
+    @include mediaQueries(600px) {
+      width: 276px;
+      right: 0px;
+    }
+    @include mediaQueries(1024px) {
+      left: 20px;
+      padding: 25px 20px;
+    }
+    .swiper-slide-title {
+      @include project-title();
+      @include mediaQueries(1024px) {
+        font-size: 22px;
+        line-height: 120%;
+      }
+    }
+  }
+}
+
+@include allow-hover {
+  .swiper-card-first,
+  .swiper-card-second,
+  .swiper-card-third,
+  .swiper-card-fourth {
+    &:hover {
+      .image img {
+        transform: scale(1.1);
+      }
+    }
+
+    &:hover {
+      .swiper-slide-info {
+        left: calc(100% - (316px + 20px));
+      }
+    }
+  }
+}

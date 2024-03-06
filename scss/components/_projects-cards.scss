@@ -1,0 +1,92 @@
+@import "../sass-utils/variables";
+@import "../sass-utils/mixins";
+
+.projects-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 64px;
+  @include mediaQueries(1024px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .project {
+    position: relative;
+    flex: 1 1 calc(100% / 2 - 40px);
+    padding-bottom: 26px;
+    width: 100%;
+    .image {
+      height: 188px;
+      overflow: hidden;
+      @include mediaQueries(600px) {
+        height: 250px;
+      }
+      @include mediaQueries(768px) {
+        height: 300px;
+      }
+      @include mediaQueries(1024px) {
+        height: 400px;
+      }
+      @include mediaQueries(1440px) {
+        height: 444px;
+      }
+      img {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.65s ease;
+      }
+    }
+
+    .project-info {
+      position: absolute;
+      padding-left: 40px;
+      padding-right: 19px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      left: 15px;
+      right: 15px;
+      width: auto;
+      bottom: 0;
+      background: $background_info;
+      transition: 0.65s;
+      backdrop-filter: blur(41px);
+      @include mediaQueries(1024px) {
+        width: 342px;
+        left: 27px;
+        right: 0;
+        padding: 25px 40px;
+      }
+      .project-title {
+        @include project-title();
+        @include mediaQueries(1024px) {
+          font-size: 22px;
+          line-height: 120%;
+        }
+      }
+    }
+  }
+
+  @include allow-hover {
+    .first-project,
+    .second-project,
+    .third-project,
+    .fourth-project {
+      &:hover {
+        .image img {
+          transform: scale(1.2);
+        }
+      }
+
+      &:hover {
+        .project-info {
+          left: calc(100% - (422px + 27px));
+        }
+      }
+    }
+  }
+}

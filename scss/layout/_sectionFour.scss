@@ -1,0 +1,32 @@
+@import "../sass-utils/mixins";
+@import "../components/cardInfo";
+@import "../components/project-card";
+
+.section-four {
+  max-width: 1805px;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 65px;
+  @include mediaQueries(768px) {
+    width: 95%;
+  }
+  @include mediaQueries(1024px) {
+    margin-top: 86px;
+  }
+  @include mediaQueries(1850px) {
+    width: 100%;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 15px;
+    @include section-title();
+    @include mediaQueries(1024px) {
+      font-weight: 300;
+      font-size: 26px;
+      line-height: 157%;
+      letter-spacing: 0.09em;
+      margin-bottom: 45px;
+    }
+  }
+}

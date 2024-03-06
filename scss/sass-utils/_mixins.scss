@@ -1,0 +1,73 @@
+@import "./variables";
+
+@mixin mediaQueries($w) {
+  @media only screen and (min-width: $w) {
+    @content;
+  }
+}
+
+@mixin title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 133%;
+  text-transform: uppercase;
+  text-align: center;
+  color: $title_black;
+}
+
+@mixin description {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  text-align: center;
+  color: $black;
+}
+
+@mixin project-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  color: $white;
+  text-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.37);
+}
+
+@mixin details-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 133%;
+  text-transform: uppercase;
+  color: #262626;
+}
+
+@mixin details-description {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: $black;
+}
+
+@mixin href {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.06em;
+  text-transform: capitalize;
+  color: $blue;
+}
+
+@mixin section-title {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 163%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $black;
+}
+
+@mixin allow-hover {
+  @media (hover: hover) {
+    @content;
+  }
+}

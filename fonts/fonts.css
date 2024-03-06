@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Roboto"), url(./Roboto-Regular.woff);
+}
+
+@font-face {
+  font-family: "Prompt";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Prompt"), url(./Prompt-Bold.woff);
+}
+
+@font-face {
+  font-family: "Prompt";
+  font-weight: 600;
+  font-style: normal;
+  src: local("Prompt"), url(./Prompt-SemiBold.woff);
+}
+
+@font-face {
+  font-family: "Prompt";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Prompt"), url(./Prompt-Medium.woff);
+}
+
+@font-face {
+  font-family: "Prompt";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Prompt"), url(./Prompt-Regular.woff);
+}
+
+@font-face {
+  font-family: "Prompt";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Prompt"), url(./Prompt-Light.woff);
+}

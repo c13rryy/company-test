@@ -1,0 +1,16 @@
+@import "../sass-utils/mixins";
+
+.button {
+  border: 1px solid $white;
+  border-radius: 1px;
+  padding: 14px 30px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 120%;
+  letter-spacing: 0.07em;
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: center;
+  color: $white;
+  background: none;
+}

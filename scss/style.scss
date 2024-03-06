@@ -1,0 +1,195 @@
+@import "../scss/sass-utils/variables";
+@import "../scss/layout/sectionOne";
+@import "../scss/layout/sectionOne";
+@import "../scss/layout/sectionTwo";
+@import "../scss/layout/sectionThree";
+@import "../scss/layout/sectionFour";
+@import "../scss//layout/sectionTest";
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  line-height: 1;
+  color: $black;
+  background-color: $white;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  padding: 33px 0px;
+}
+
+.swiper {
+  height: 335px;
+  max-width: 1754px;
+  width: 100%;
+}
+
+.slide-content {
+  margin: 0 20px;
+  overflow: hidden;
+}
+
+.swiper .swiper-wrapper .swiper-slide {
+  height: 300px !important;
+}
+
+.swiper-pagination {
+  bottom: 0 !important;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background: #dddddd;
+  width: 30px;
+  height: 5px;
+  border-radius: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: #0568c3;
+}
+
+.swiper-button-prev {
+  left: 0px !important;
+  color: #dddddd !important;
+  display: none !important;
+}
+
+.swiper-button-next {
+  right: 0px !important;
+  color: #dddddd !important;
+  display: none !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #0568c3 !important;
+  transition: 0.8s;
+}
+
+.swiper-button-prev:after .swiper-button-next:after {
+  font-size: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    padding: 90px 0px;
+  }
+
+  .slide-content {
+    margin: 0;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: flex !important;
+  }
+  .slide-content {
+    margin: 0 67px;
+    overflow: hidden;
+  }
+}

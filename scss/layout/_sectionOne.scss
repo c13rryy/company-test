@@ -1,0 +1,14 @@
+@import "../sass-utils/mixins";
+@import "../components/cardInfo";
+
+.section-one {
+  max-width: 1805px;
+  margin: 0 auto;
+  width: 100%;
+  @include mediaQueries(768px) {
+    width: 95%;
+  }
+  @include mediaQueries(1850px) {
+    width: 100%;
+  }
+}

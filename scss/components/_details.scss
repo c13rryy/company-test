@@ -1,0 +1,97 @@
+@import "../sass-utils/mixins";
+@import "../sass-utils/variables";
+
+.detailts {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  position: relative;
+  z-index: 3;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding-top: 71px;
+  padding-bottom: 71px;
+  @include mediaQueries(1024px) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0px;
+  }
+  .detail-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 18px;
+    @include mediaQueries(1024px) {
+      flex-direction: row;
+      align-items: start;
+      gap: 20px;
+      width: 550px;
+    }
+    .image img {
+      width: 70px;
+      height: 70px;
+      @include mediaQueries(768px) {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 20px;
+      padding-right: 20px;
+      @include mediaQueries(1024px) {
+        align-items: start;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .detail-title {
+        text-align: center;
+        @include details-title();
+        @include mediaQueries(1024px) {
+          font-size: 19px;
+          line-height: 132%;
+          text-align: start;
+        }
+      }
+
+      .detail-description {
+        margin-top: 10px;
+        text-align: center;
+        @include details-description();
+        @include mediaQueries(1024px) {
+          font-size: 14px;
+          line-height: 143%;
+          margin-top: 5px;
+          text-align: start;
+        }
+      }
+
+      .detail-href {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-top: 18px;
+        @include href();
+        @include mediaQueries(1024px) {
+          font-size: 14px;
+          line-height: 143%;
+          letter-spacing: 0.07em;
+          margin-top: 13px;
+          border-bottom: 1px solid transparent;
+        }
+
+        @include allow-hover {
+          &:hover {
+            border-color: $blue;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}
